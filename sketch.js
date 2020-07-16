@@ -56,7 +56,6 @@ function setup() {
     sel.option(6);
     sel.option(7);
     sel.option(8);
-    sel.option(9);
     sel.option(69);
     sel.selected(5);
     sel.changed(changeDifficulty);
