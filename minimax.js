@@ -7,7 +7,7 @@ function bestMove(){
     let move;
     for(let i = 0; i < 7; i++){
         for(let j = 0; j < 6; j++){
-            if(board[i][j] == "" && j == lastSpace(i)){
+            if(board[i][j] == "" && j == lastSpace(i) && lastSpace(i) >= 0){
                 board[i][j] = red;
                 let score = minimax(board, depth, alpha, beta, false);
                 board[i][j] = "";
@@ -44,7 +44,7 @@ function minimax(board, depth, alpha, beta, isMaximizing){
         maxloop:
             for(let i = 0; i < 7; i++){
                 for(let j = 0; j < 6; j++){
-                    if(board[i][j] == "" && j == lastSpace(i)){
+                    if(board[i][j] == "" && j == lastSpace(i) && lastSpace(i) >= 0){
                         board[i][j] = red;
                         let score = minimax(board, depth - 1, alpha, beta, false);
                         board[i][j] = "";
@@ -62,7 +62,7 @@ function minimax(board, depth, alpha, beta, isMaximizing){
         minloop:
             for(let i = 0; i < 7; i++){
                 for(let j = 0; j < 6; j++){
-                    if(board[i][j] == "" && j == lastSpace(i)){
+                    if(board[i][j] == "" && j == lastSpace(i) && lastSpace(i) >= 0){
                         board[i][j] = yellow;
                         let score = minimax(board, depth - 1, alpha, beta, true);
                         board[i][j] = "";
