@@ -43,28 +43,28 @@ function setup() {
     thinkingText.style("font-size", "32pt");
     thinkingText.position(width / 2 - 150, height - 35);
 
-    selText = createP("AI difficulty (higher will give smarter AI, but longer time to think about moves)");
-    selText.style("font-size", "12pt");
-    selText.position(50, height + 85);
+    // selText = createP("AI difficulty (higher will give smarter AI, but longer time to think about moves)");
+    // selText.style("font-size", "12pt");
+    // selText.position(50, height + 85);
 
-    sel = createSelect();
-    sel.option(1);
-    sel.option(2);
-    sel.option(3);
-    sel.option(4);
-    sel.option(5);
-    sel.option(6);
-    sel.option(7);
-    sel.option(8);
-    sel.option(69);
-    sel.selected(5);
-    sel.changed(changeDifficulty);
-    sel.position(8, height + 100);
+    // sel = createSelect();
+    // sel.option(1);
+    // sel.option(2);
+    // sel.option(3);
+    // sel.option(4);
+    // sel.option(5);
+    // sel.option(6);
+    // sel.option(7);
+    // sel.option(8);
+    // sel.option(69);
+    // sel.selected(5);
+    // sel.changed(changeDifficulty);
+    // sel.position(8, height + 100);
 }
 
-function changeDifficulty(){
-    depth = sel.value();
-}
+// function changeDifficulty(){
+//     depth = sel.value();
+// }
 
 function resetSketch(){
     board = [
@@ -78,7 +78,7 @@ function resetSketch(){
     ];
     resultText.html("");
     currentPlayer = yellow
-    sel.removeAttribute("disabled");
+    //sel.removeAttribute("disabled");
     loop();
 }
 
@@ -128,7 +128,7 @@ function canvasPressed(){
         let i = floor(mouseX / w);
         let j = lastSpace(i);
         if(j >= 0 && board[i][j] == ""){
-            sel.attribute("disabled", "true");
+            //sel.attribute("disabled", "true");
             board[i][j] = yellow;
             currentPlayer = red;
             thinkingText.html("The AI is thinking...");
