@@ -1,4 +1,4 @@
-let depth = 5;
+let depth = 7;
 let alpha = -Infinity;
 let beta = Infinity;
 
@@ -24,19 +24,19 @@ function bestMove(){
 }
 
 let scores = {
-    r: 1,
-    y: -1,
+    r: 100,
+    y: -100,
     tie: 0
 };
 
 function minimax(board, depth, alpha, beta, isMaximizing){
     let result = checkWinner();
     if(result !== null){
-        return scores[result];
+        return scores[result] + depth;
     }
 
     if(depth < 0){
-        return 0;
+        return Math.floor(Math.random() * (10000 - 1) + 100) / 100;
     }
 
     if(isMaximizing){
