@@ -1,4 +1,4 @@
-let depth = 6;
+let depth = 7;
 let alpha = -Infinity;
 let beta = Infinity;
 
