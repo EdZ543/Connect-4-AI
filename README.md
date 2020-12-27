@@ -2,5 +2,5 @@
 
 # Connect4_AI
 An AI that plays Connect 4.\
-See if you can beat it here: https://edz543.github.io/Connect4_AI/\
+See if you can beat it here: https://edz543.github.io/Connect4_AI/ \
 Made using the Minimax algorithm and alpha–beta pruning.
